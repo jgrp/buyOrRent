@@ -21,7 +21,6 @@
         class="w-32"
         :inputStyle="{ textAlign: 'right' }"
       />
-      <span class="ml-2">{{ formatDisplay(modelValueProxy) }}</span>
     </div>
     <Slider
       v-model="modelValueProxy"

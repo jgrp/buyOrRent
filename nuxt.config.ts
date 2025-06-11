@@ -20,9 +20,10 @@ export default defineNuxtConfig({
     options: {
       ripple: true,
       theme: {
-        preset: Aura
+        preset: Aura,
+        darkModeSelector: '.app-dark',
       },
-        inputVariant: 'filled'
+      inputVariant: 'filled',
     }
   }
 })

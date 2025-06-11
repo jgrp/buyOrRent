@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <h1>start</h1>
-    <Button label="Verify" />
+  <div class="main">
     <calculation-form></calculation-form>
   </div>
 </template>
@@ -10,4 +8,10 @@
 </script>
 
 <style scoped>
+
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
 </style>

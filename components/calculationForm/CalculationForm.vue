@@ -3,94 +3,94 @@
     <!-- Allgemeine Angaben -->
     <h2 class="font-bold text-xl mb-2">Allgemeine Angaben</h2>
     <SliderField
-      label="Eigenkapital"
-      tooltip="Eigenkapital ist das verfügbare Startkapital."
-      v-model="form.equity"
-      :min="0"
-      :max="1000000"
-      mode="currency"
-      currency="EUR"
-      locale="de-DE"
+        label="Eigenkapital"
+        tooltip="Eigenkapital ist das verfügbare Startkapital."
+        v-model="form.equity"
+        :min="0"
+        :max="1000000"
+        mode="currency"
+        currency="EUR"
+        locale="de-DE"
     />
 
     <!-- Mieten und Anlegen -->
     <h2 class="font-bold text-xl mt-8 mb-2">Mieten und Anlegen</h2>
     <SliderField
-      label="Aktuelle monatliche Kaltmiete"
-      tooltip="Miete ohne Nebenkosten."
-      v-model="form.rent"
-      :min="0"
-      :max="5000"
-      mode="currency"
-      currency="EUR"
-      locale="de-DE"
+        label="Aktuelle monatliche Kaltmiete"
+        tooltip="Miete ohne Nebenkosten."
+        v-model="form.rent"
+        :min="0"
+        :max="5000"
+        mode="currency"
+        currency="EUR"
+        locale="de-DE"
     />
     <SliderField
-      label="Mietsteigerung pro Jahr"
-      tooltip="Jährlicher Prozentsatz der Mietsteigerung."
-      v-model="form.rentIncrease"
-      :min="0"
-      :max="10"
-      :step="0.1"
-      suffix="%"
+        label="Mietsteigerung pro Jahr"
+        tooltip="Jährlicher Prozentsatz der Mietsteigerung."
+        v-model="form.rentIncrease"
+        :min="0"
+        :max="10"
+        :step="0.1"
+        suffix="%"
     />
     <SliderField
-      label="Rendite bei angelegtem Eigenkapital"
-      tooltip="Erwartete Jahresrendite des Eigenkapitals."
-      v-model="form.equityReturn"
-      :min="0"
-      :max="20"
-      :step="0.1"
-      suffix="%"
+        label="Rendite bei angelegtem Eigenkapital"
+        tooltip="Erwartete Jahresrendite des Eigenkapitals."
+        v-model="form.equityReturn"
+        :min="0"
+        :max="20"
+        :step="0.1"
+        suffix="%"
     />
 
     <!-- Immobilie kaufen -->
     <h2 class="font-bold text-xl mt-8 mb-2">Immobilie kaufen</h2>
     <SliderField
-      label="Kaufpreis (ohne Nebenkosten)"
-      tooltip="Der reine Kaufpreis der Immobilie."
-      v-model="form.purchasePrice"
-      :min="0"
-      :max="2000000"
-      mode="currency"
-      currency="EUR"
-      locale="de-DE"
+        label="Kaufpreis (ohne Nebenkosten)"
+        tooltip="Der reine Kaufpreis der Immobilie."
+        v-model="form.purchasePrice"
+        :min="0"
+        :max="2000000"
+        mode="currency"
+        currency="EUR"
+        locale="de-DE"
     />
     <SliderField
-      label="Kaufnebenkosten"
-      tooltip="Summe aus Notar, Grunderwerbsteuer, Makler etc."
-      v-model="form.additionalCosts"
-      :min="0"
-      :max="20"
-      :step="0.1"
-      suffix="%"
+        label="Kaufnebenkosten"
+        tooltip="Summe aus Notar, Grunderwerbsteuer, Makler etc."
+        v-model="form.additionalCosts"
+        :min="0"
+        :max="20"
+        :step="0.1"
+        suffix="%"
     />
     <SliderField
-      label="Wertsteigerung pro Jahr"
-      tooltip="Erwartete jährliche Wertsteigerung der Immobilie."
-      v-model="form.appreciation"
-      :min="0"
-      :max="10"
-      :step="0.1"
-      suffix="%"
+        label="Wertsteigerung pro Jahr"
+        tooltip="Erwartete jährliche Wertsteigerung der Immobilie."
+        v-model="form.appreciation"
+        :min="0"
+        :max="10"
+        :step="0.1"
+        suffix="%"
     />
     <SliderField
-      label="Instandhaltungskosten pro Jahr"
-      tooltip="Prozentuale jährliche Kosten für Instandhaltung."
-      v-model="form.maintenance"
-      :min="0"
-      :max="10"
-      :step="0.1"
-      suffix="%"
+        label="Instandhaltungskosten pro Jahr"
+        tooltip="Prozentuale jährliche Kosten für Instandhaltung."
+        v-model="form.maintenance"
+        :min="0"
+        :max="10"
+        :step="0.1"
+        suffix="%"
     />
     <SliderField
-      label="Gesamte Kreditlaufzeit"
-      tooltip="Gesamtdauer der Finanzierung."
-      v-model="form.loanTerm"
-      :min="1"
-      :max="35"
-      :step="1"
-      suffix="Jahre"
+        label="Gesamte Kreditlaufzeit"
+        tooltip="Gesamtdauer der Finanzierung."
+        v-model="form.loanTerm"
+        :min="1"
+        :max="35"
+        :step="1"
+        suffix="Jahre"
     />
 
     <!-- Details zur Finanzierung (optional ein/ausklappbar) -->
@@ -102,36 +102,40 @@
     </div>
     <div v-if="showFinanceDetails" class="mt-2">
       <SliderField
-        label="Kreditzins zu Beginn"
-        tooltip="Zinssatz zu Beginn der Finanzierung."
-        v-model="form.initialInterestRate"
-        :min="0"
-        :max="10"
-        :step="0.1"
-        suffix="%"
+          label="Kreditzins zu Beginn"
+          tooltip="Zinssatz zu Beginn der Finanzierung."
+          v-model="form.initialInterestRate"
+          :min="0"
+          :max="10"
+          :step="0.1"
+          suffix="%"
       />
       <SliderField
-        label="Erste Zinsbindung"
-        tooltip="Dauer der ersten Zinsbindung."
-        v-model="form.fixedInterestPeriod"
-        :min="1"
-        :max="20"
-        :step="1"
-        suffix="Jahre"
+          label="Erste Zinsbindung"
+          tooltip="Dauer der ersten Zinsbindung."
+          v-model="form.fixedInterestPeriod"
+          :min="1"
+          :max="20"
+          :step="1"
+          suffix="Jahre"
       />
       <SliderField
-        label="Kreditzins restliche Kreditlaufzeit"
-        tooltip="Zinssatz nach Ende der ersten Zinsbindung."
-        v-model="form.followUpInterestRate"
-        :min="0"
-        :max="10"
-        :step="0.1"
-        suffix="%"
+          label="Kreditzins restliche Kreditlaufzeit"
+          tooltip="Zinssatz nach Ende der ersten Zinsbindung."
+          v-model="form.followUpInterestRate"
+          :min="0"
+          :max="10"
+          :step="0.1"
+          suffix="%"
       />
     </div>
 
     <div class="mt-8 p-4 border rounded bg-gray-50">
       <h2 class="font-bold text-lg mb-2">Ergebnis</h2>
+      <div>
+        <strong>Monatliche Ausgaben:</strong>
+        <span>{{ renterMonthlyCost.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }) }}</span>
+      </div>
       <div>
         <strong>Mieten & Anlegen:</strong>
         <span>{{ futureValueRenting.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }) }}</span>
@@ -140,14 +144,15 @@
         <strong>Immobilie kaufen:</strong>
         <span>{{ futureValueBuying.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }) }}</span>
       </div>
-    </div>
 
+    </div>
   </div>
 </template>
 
 <script setup>
-import { ref , computed } from 'vue'
+import { ref, computed } from 'vue'
 import SliderField from './SliderField.vue'
+import { compareBuyVsRent } from '@/utils/buy_or_rent_calculator'
 
 const showFinanceDetails = ref(true)
 
@@ -164,6 +169,25 @@ const form = ref({
   initialInterestRate: 4,
   fixedInterestPeriod: 10,
   followUpInterestRate: 4,
-});
+})
+
+const result = computed(() => compareBuyVsRent({
+  initialCapital: form.value.equity,
+  realEstatePrice: form.value.purchasePrice,
+  purchasingCost: form.value.additionalCosts / 100,
+  increaseValuePerYear: form.value.appreciation / 100,
+  fullDurationYears: form.value.loanTerm,
+  financingInterest1: form.value.initialInterestRate / 100,
+  financingInterest2: form.value.followUpInterestRate / 100,
+  firstDurationYears: form.value.fixedInterestPeriod,
+  monthlyRent: form.value.rent,
+  increaseRentPerYear: form.value.rentIncrease / 100,
+  yearlyMaintenance: form.value.maintenance / 100,
+  investmentYield: form.value.equityReturn / 100,
+}))
+
+const futureValueRenting = computed(() => result.value.renterEquity.at(-1) || 0)
+const futureValueBuying = computed(() => result.value.homeOwnerEquity.at(-1) || 0)
+const renterMonthlyCost = computed(() => result.value.renterMonthlyCost.at(-1) || 0)
 
 </script>
