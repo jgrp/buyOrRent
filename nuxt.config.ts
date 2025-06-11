@@ -13,11 +13,16 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@primevue/nuxt-module'
   ],
+  plugins: [
+    './plugins/primevue.ts'
+  ],
   primevue: {
     options: {
+      ripple: true,
       theme: {
         preset: Aura
-      }
+      },
+        inputVariant: 'filled'
     }
   }
 })
